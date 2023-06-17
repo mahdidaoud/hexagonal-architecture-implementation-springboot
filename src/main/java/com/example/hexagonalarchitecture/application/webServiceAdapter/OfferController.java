@@ -1,4 +1,4 @@
-package com.example.hexagonalarchitecture.application.WebServiceAdapter;
+package com.example.hexagonalarchitecture.application.webServiceAdapter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.example.hexagonalarchitecture.application.WebServiceAdapter;
+package com.example.hexagonalarchitecture.application.webServiceAdapter;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

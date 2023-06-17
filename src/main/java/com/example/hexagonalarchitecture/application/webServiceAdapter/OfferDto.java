@@ -1,4 +1,4 @@
-package com.example.hexagonalarchitecture.application.WebServiceAdapter;
+package com.example.hexagonalarchitecture.application.webServiceAdapter;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

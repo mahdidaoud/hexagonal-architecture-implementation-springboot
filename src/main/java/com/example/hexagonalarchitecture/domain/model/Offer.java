@@ -7,6 +7,11 @@ public class Offer {
     long actualPrice;
     long originalPrice;
 
+    @Override
+    public String toString() {
+        return "Offer [id=" + id + ", discount=" + discount + ", actualPrice=" + actualPrice + ", originalPrice="
+                + originalPrice + "]";
+    }
     public void setId(Long id) {
         this.id = id;
     }
