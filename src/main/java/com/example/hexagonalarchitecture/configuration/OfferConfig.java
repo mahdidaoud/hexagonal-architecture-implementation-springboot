@@ -7,13 +7,19 @@ import com.example.hexagonalarchitecture.domain.port.api.OfferServicePort;
 import com.example.hexagonalarchitecture.domain.port.spi.OfferPersistencePort;
 import com.example.hexagonalarchitecture.domain.service.OfferServiceImpl;
 import com.example.hexagonalarchitecture.infrastructure.h2dbadapter.H2DBAdapter;
+import com.example.hexagonalarchitecture.infrastructure.kafkaconsumeradapter.KafkaAdapter;
 
 @Configuration
 public class OfferConfig {
 
-    @Bean
+  /*   @Bean
     public OfferPersistencePort offerPersistence() {
         return new H2DBAdapter();
+    } */
+
+    @Bean
+    public OfferPersistencePort offerPersistence() {
+        return new KafkaAdapter();
     }
 
     @Bean
