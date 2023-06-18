@@ -1,20 +1,22 @@
 package com.example.hexagonalarchitecture.domain.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import com.example.hexagonalarchitecture.domain.model.Offer;
 import com.example.hexagonalarchitecture.domain.port.api.OfferServicePort;
 import com.example.hexagonalarchitecture.domain.port.spi.OfferPersistencePort;
 
+@Component
 public class OfferServiceImpl implements OfferServicePort {
 
-    OfferPersistencePort offerpersistenceport ;
+    @Autowired
+    @Qualifier("impl2")
+    OfferPersistencePort offerpersistenceport;
 
-    public OfferServiceImpl(OfferPersistencePort offerPersistencePort) {
-        this.offerpersistenceport = offerPersistencePort;
-    }
-
-
-    public Offer calculateActualPrice(Offer offer){
-        offer.setActualPrice(offer.getOriginalPrice()-((offer.getDiscount()*offer.getOriginalPrice())/100) ); 
+    public Offer calculateActualPrice(Offer offer) {
+        offer.setActualPrice(offer.getOriginalPrice() - ((offer.getDiscount() * offer.getOriginalPrice()) / 100));
         return offer;
     }
 
@@ -25,7 +27,7 @@ public class OfferServiceImpl implements OfferServicePort {
 
     @Override
     public Offer getOfferById(Long id) {
-       return offerpersistenceport.getOfferById(id);
+        return offerpersistenceport.getOfferById(id);
     }
-    
+
 }
