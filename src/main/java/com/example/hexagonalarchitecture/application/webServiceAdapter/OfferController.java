@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.hexagonalarchitecture.application.OfferDto;
+import com.example.hexagonalarchitecture.application.OfferMapperDtoModel;
 import com.example.hexagonalarchitecture.domain.model.Offer;
 import com.example.hexagonalarchitecture.domain.port.api.OfferServicePort;
 
