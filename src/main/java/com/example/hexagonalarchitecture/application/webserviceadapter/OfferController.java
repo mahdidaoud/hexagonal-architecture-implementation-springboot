@@ -1,4 +1,4 @@
-package com.example.hexagonalarchitecture.application.webServiceAdapter;
+package com.example.hexagonalarchitecture.application.webserviceadapter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,14 +19,14 @@ public class OfferController {
     OfferServicePort offerserviceport;
 
     @PostMapping("/")
-    public OfferDto createOffer(@RequestBody OfferDto offerdto){
+    public OfferDto createOffer(@RequestBody OfferDto offerdto) {
         Offer offer = OfferMapperDtoModel.INSTANCE.offerDtoToOfferModel(offerdto);
-        return OfferMapperDtoModel.INSTANCE.offerModelToOfferDto(offerserviceport.createOffer(offer)); 
+        return OfferMapperDtoModel.INSTANCE.offerModelToOfferDto(offerserviceport.createOffer(offer));
     }
-    
+
     @GetMapping("/{id}")
-    public OfferDto getOffer(@PathVariable(value = "id") Long id){
-        return OfferMapperDtoModel.INSTANCE.offerModelToOfferDto(offerserviceport.getOfferById(id)); 
+    public OfferDto getOffer(@PathVariable(value = "id") Long id) {
+        return OfferMapperDtoModel.INSTANCE.offerModelToOfferDto(offerserviceport.getOfferById(id));
 
     }
 }

@@ -15,5 +15,4 @@ public interface OfferMapperEntityModel {
 
     Offer offerEntityToOfferModel(Offerentity offerentity);
 
-
 }

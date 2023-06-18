@@ -14,5 +14,4 @@ public interface OfferMapperDtoModel {
 
     Offer offerDtoToOfferModel(OfferDto offerdto);
 
-
 }
